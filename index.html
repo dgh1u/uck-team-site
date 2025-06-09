@@ -6,6 +6,8 @@
     <title>Vietnam National University of Agriculture</title>
     <link rel="stylesheet" href="dist/output.css" />
     <link rel="stylesheet" href="src/input.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-marquee@1.0.6/dist/vanilla-marquee.min.js"></script>
   </head>
   <body>
     <header
@@ -87,19 +89,19 @@
     <nav class="bg-white shadow-md">
       <div class="container mx-auto px-4">
         <div class="flex items-center justify-center">
-          <ul class="flex space-x-8 py-4">
+          <ul class="flex space-x-8 py-6">
             <li>
               <a
-                href="#gioi-thieu"
-                class="text-black hover:text-blue-600 font-medium transition-colors duration-200 px-4 py-2 rounded hover:bg-gray-100"
+                href="#ve-chung-toi"
+                class="text-black hover:text-blue-600 2xl:text-xl lg:text-lg font-medium transition-colors duration-200 px-4 py-2 rounded hover:bg-gray-100"
               >
-                Giới thiệu
+                Về chúng tôi
               </a>
             </li>
             <li>
               <a
                 href="projects.html"
-                class="text-black hover:text-blue-600 font-medium transition-colors duration-200 px-4 py-2 rounded hover:bg-gray-100"
+                class="text-black hover:text-blue-600 2xl:text-xl lg:text-lg font-medium transition-colors duration-200 px-4 py-2 rounded hover:bg-gray-100"
               >
                 Dự án
               </a>
@@ -107,7 +109,7 @@
             <li>
               <a
                 href="#hop-tac"
-                class="text-black hover:text-blue-600 font-medium transition-colors duration-200 px-4 py-2 rounded hover:bg-gray-100"
+                class="text-black hover:text-blue-600 2xl:text-xl lg:text-lg font-medium transition-colors duration-200 px-4 py-2 rounded hover:bg-gray-100"
               >
                 Hợp tác
               </a>
@@ -115,7 +117,7 @@
             <li>
               <a
                 href="#thanh-tuu"
-                class="text-black hover:text-blue-600 font-medium transition-colors duration-200 px-4 py-2 rounded hover:bg-gray-100"
+                class="text-black hover:text-blue-600 2xl:text-xl lg:text-lg font-medium transition-colors duration-200 px-4 py-2 rounded hover:bg-gray-100"
               >
                 Thành tựu
               </a>
@@ -123,7 +125,7 @@
             <li>
               <a
                 href="#hoat-dong"
-                class="text-black hover:text-blue-600 font-medium transition-colors duration-200 px-4 py-2 rounded hover:bg-gray-100"
+                class="text-black hover:text-blue-600 2xl:text-xl lg:text-lg font-medium transition-colors duration-200 px-4 py-2 rounded hover:bg-gray-100"
               >
                 Hoạt động
               </a>
@@ -131,7 +133,7 @@
             <li>
               <a
                 href="#chinh-sach"
-                class="text-black hover:text-blue-600 font-medium transition-colors duration-200 px-4 py-2 rounded hover:bg-gray-100"
+                class="text-black hover:text-blue-600 2xl:text-xl lg:text-lg font-medium transition-colors duration-200 px-4 py-2 rounded hover:bg-gray-100"
               >
                 Chính sách
               </a>
@@ -147,47 +149,692 @@
     </div>
 
     <!-- Demo content sections -->
-    <main class="container mx-auto px-4 py-8 space-y-16">
-      <section id="gioi-thieu" class="min-h-[400px] bg-gray-50 p-8 rounded-lg">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Giới thiệu</h2>
-        <p class="text-gray-600">
-          Nội dung giới thiệu về UCK Team và Khoa Công nghệ Thông tin...
+
+    <section id="ve-chung-toi" class="p-4 pt-8 pb-16 rounded-lg">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-6 text-center">
+        Về chúng tôi
+      </h2>
+
+      <!-- Intro paragraph -->
+      <div class="max-w-5xl mx-auto mb-12">
+        <p class="text-xl text-black leading-relaxed text-center">
+          UCK Team là một nhóm nghiên cứu và phát triển công nghệ hàng đầu tại
+          Khoa Công nghệ Thông tin, Học viện Nông nghiệp Việt Nam. Được thành
+          lập với sứ mệnh đưa công nghệ thông tin vào phục vụ lợi ích sinh viên
+          và cán bộ nhà trường, chúng tôi tập trung vào việc nghiên cứu, phát
+          triển các giải pháp công nghệ tiên tiến nhằm giải quyết các vấn đề về
+          khoa học và công nghệ được đặt ra.
         </p>
-      </section>
+      </div>
 
-      <section id="du-an" class="min-h-[400px] bg-blue-50 p-8 rounded-lg">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Dự án</h2>
-        <p class="text-gray-600">
-          Các dự án nghiên cứu và phát triển của nhóm...
-        </p>
-      </section>
+      <!-- Statistics Section -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <!-- Members Counter -->
+        <div
+          class="bg-white rounded-lg transition-shadow duration-300 text-center"
+        >
+          <div class="flex items-center justify-center gap-4 mb-4">
+            <div
+              class="w-20 h-20 rounded-xl flex items-center border border-black justify-center"
+            >
+              <i data-lucide="users" class="w-9 h-9 text-yellow-500"></i>
+            </div>
+            <div>
+              <div
+                class="text-6xl font-semibold text-red-500 mb-1"
+                id="members-count"
+              >
+                0
+              </div>
+              <div class="text-lg text-black font-semibold">Thành viên</div>
+            </div>
+          </div>
+        </div>
 
-      <section id="hop-tac" class="min-h-[400px] bg-green-50 p-8 rounded-lg">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Hợp tác</h2>
-        <p class="text-gray-600">
-          Thông tin về các đối tác và cơ hội hợp tác...
-        </p>
-      </section>
+        <!-- Technologies Counter -->
+        <div
+          class="bg-white rounded-lg transition-shadow duration-300 text-center"
+        >
+          <div class="flex items-center justify-center gap-4 mb-4">
+            <div
+              class="w-20 h-20 rounded-xl flex items-center border border-black justify-center"
+            >
+              <i data-lucide="cpu" class="w-10 h-10 text-green-600"></i>
+            </div>
+            <div>
+              <div
+                class="text-6xl font-semibold text-red-500 mb-1"
+                id="tech-count"
+              >
+                0
+              </div>
+              <div class="text-lg text-black font-semibold">
+                Công nghệ sử dụng
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <section id="thanh-tuu" class="min-h-[400px] bg-yellow-50 p-8 rounded-lg">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Thành tựu</h2>
-        <p class="text-gray-600">
-          Những thành tích và giải thưởng đã đạt được...
-        </p>
-      </section>
+        <!-- Projects Counter -->
+        <div
+          class="bg-white rounded-lg transition-shadow duration-300 text-center"
+        >
+          <div class="flex items-center justify-center gap-4 mb-4">
+            <div
+              class="w-20 h-20 rounded-xl flex items-center border border-black justify-center"
+            >
+              <i
+                data-lucide="briefcase-business"
+                class="w-10 h-10 text-amber-700"
+              ></i>
+            </div>
+            <div>
+              <div
+                class="text-6xl font-semibold text-red-500 mb-1"
+                id="projects-count"
+              >
+                0
+              </div>
+              <div class="text-lg text-black font-semibold">
+                Đề tài được thực hiện
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section id="hoat-dong" class="min-h-[400px] bg-purple-50 p-8 rounded-lg">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Hoạt động</h2>
-        <p class="text-gray-600">Các hoạt động và sự kiện của nhóm...</p>
-      </section>
+    <!-- FOUNDER Section -->
+    <section id="founder" class="p-4 py-16 rounded-lg">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-12 text-center">
+        Người sáng lập
+      </h2>
 
-      <section id="chinh-sach" class="min-h-[400px] bg-red-50 p-8 rounded-lg">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Chính sách</h2>
-        <p class="text-gray-600">Các chính sách và quy định của nhóm...</p>
-      </section>
-    </main>
+      <div class="max-w-6xl mx-auto space-y-16">
+        <!-- Founder 1: TS. Phạm Quang Dũng (Avatar trái, Nội dung phải) -->
+        <div class="flex items-center gap-8 bg-white rounded-xl">
+          <!-- Avatar -->
+          <div class="flex-shrink-0">
+            <div class="w-60 h-60 rounded-full overflow-hidden bg-gray-100">
+              <img
+                src="assets/pqdung.jpg"
+                alt="TS. Phạm Quang Dũng"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="flex-1">
+            <div class="flex items-center gap-4 mb-4">
+              <h3 class="text-3xl font-bold text-gray-800">
+                TS. Phạm Quang Dũng
+              </h3>
+              <span
+                class="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                Founder
+              </span>
+            </div>
+
+            <div class="space-y-2 text-gray-700 mb-6">
+              <p class="text-lg">
+                <strong>Đơn vị:</strong> Bộ môn Mạng và Hệ thống thông tin –
+                Khoa Công nghệ thông tin – Học viện Nông nghiệp Việt Nam
+              </p>
+              <p class="text-lg">
+                <strong>Chức vụ:</strong> Trưởng bộ môn Mạng và Hệ thống thông
+                tin, Giám đốc Trung tâm tin học Học viện Nông Nghiệp Việt Nam.
+              </p>
+              <p class="text-lg"><strong>Email:</strong> pqdung@vnua.edu.vn</p>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex gap-4">
+              <a
+                href="https://fita.vnua.edu.vn/pqdung/"
+                class="p-3 bg-gray-200 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 group"
+                target="_blank"
+              >
+                <img data-lucide="globe" class="w-6 h-6" />
+              </a>
+              <a
+                href="https://zalo.me/0986511750"
+                class="p-3 bg-sky-300 rounded-full hover:bg-sky-500 hover:text-white transition-all duration-300 group"
+              >
+                <img src="assets/zalo-icon.svg" class="w-6 h-6" />
+              </a>
+
+              <a
+                href="https://www.facebook.com/pqdung"
+                class="p-3 bg-blue-600 rounded-full hover:bg-blue-800 text-white transition-all duration-300 group"
+              >
+                <i data-lucide="facebook" class="w-6 h-6"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Founder 2: Ths. Trần Trung Hiếu (Avatar phải, Nội dung trái) -->
+        <div class="flex items-center gap-8 bg-white rounded-xl">
+          <!-- Content -->
+          <div class="flex-1">
+            <div class="flex items-center gap-4 mb-4 justify-end">
+              <span
+                class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+              >
+                Giáo viên phụ trách
+              </span>
+              <h3 class="text-3xl font-bold text-gray-800">
+                Ths. Trần Trung Hiếu
+              </h3>
+            </div>
+
+            <div class="space-y-2 text-gray-700 mb-6 text-right">
+              <p class="text-lg">
+                <strong>Đơn vị:</strong> Bộ môn Công nghệ phần mềm – Khoa Công
+                nghệ thông tin – Học viện Nông nghiệp Việt Nam
+              </p>
+              <p class="text-lg">
+                <strong>Chức vụ:</strong> Giảng viên chính bộ môn Công nghệ phần
+                mềm, Cựu lập trình viên Fsoft.
+              </p>
+              <p class="text-lg"><strong>Email:</strong> tthieu@vnua.edu.vn</p>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex gap-4 justify-end">
+              <a
+                href="https://fita.vnua.edu.vn/tthieu/"
+                class="p-3 bg-blue-100 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 group"
+                target="_blank"
+              >
+                <img data-lucide="globe" class="w-6 h-6" />
+              </a>
+              <a
+                href="https://zalo.me/0975276080"
+                class="p-3 bg-sky-300 rounded-full hover:bg-sky-500 hover:text-white transition-all duration-300 group"
+              >
+                <img src="assets/zalo-icon.svg" class="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.facebook.com/pqdung"
+                class="p-3 bg-blue-600 rounded-full hover:bg-blue-800 text-white transition-all duration-300 group"
+              >
+                <i data-lucide="facebook" class="w-6 h-6"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Avatar -->
+          <div class="flex-shrink-0">
+            <div class="w-60 h-60 rounded-full overflow-hidden bg-gray-100">
+              <img
+                src="assets/tthieu.png"
+                alt="Ths. Trần Trung Hiếu"
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Research Areas Section -->
+    <section id="research-areas" class="py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-semibold text-gray-800 mb-8 text-center">
+          Các lĩnh vực nghiên cứu
+        </h2>
+
+        <!-- Tab Navigation -->
+        <div class="flex justify-center mb-12">
+          <div class="bg-white rounded-lg shadow-md p-2 flex space-x-2">
+            <button
+              id="tab-website"
+              class="tab-button px-8 py-3 text-lg font-medium rounded-md transition-all duration-300 bg-blue-600 text-white"
+              onclick="switchTab('website')"
+            >
+              <i data-lucide="globe" class="w-5 h-5 inline-block mr-2"></i>
+              Website
+            </button>
+            <button
+              id="tab-desktop"
+              class="tab-button px-8 py-3 text-lg font-medium rounded-md transition-all duration-300 text-gray-600 hover:text-gray-800"
+              onclick="switchTab('desktop')"
+            >
+              <i data-lucide="monitor" class="w-5 h-5 inline-block mr-2"></i>
+              Desktop App
+            </button>
+            <button
+              id="tab-mobile"
+              class="tab-button px-8 py-3 text-lg font-medium rounded-md transition-all duration-300 text-gray-600 hover:text-gray-800"
+              onclick="switchTab('mobile')"
+            >
+              <i data-lucide="smartphone" class="w-5 h-5 inline-block mr-2"></i>
+              Mobile App
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="relative">
+          <!-- Website Tab -->
+          <div id="content-website" class="tab-content">
+            <div class="relative h-96 rounded-2xl overflow-hidden mb-8">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-700 opacity-90"
+              ></div>
+              <div class="absolute inset-0 bg-cover bg-center"></div>
+              <div
+                class="relative z-10 h-full flex items-center justify-center"
+              >
+                <div class="text-center text-white max-w-4xl px-8">
+                  <h3 class="text-4xl font-bold mb-6">Phát triển Website</h3>
+                  <p class="text-xl leading-relaxed mb-8">
+                    UCK Team chuyên nghiên cứu và phát triển các ứng dụng web
+                    hiện đại, từ website giới thiệu đến các hệ thống quản lý
+                    phức tạp. Chúng tôi sử dụng các công nghệ tiên tiến như
+                    React, Angular, Vue.js cho frontend và Node.js, PHP, Python
+                    cho backend. Đội ngũ của chúng tôi có kinh nghiệm trong việc
+                    xây dựng các website responsive, tối ưu SEO và đảm bảo tính
+                    bảo mật cao. Chúng tôi cũng chú trọng vào việc tạo ra các
+                    giao diện người dùng thân thiện và trải nghiệm người dùng
+                    tối ưu nhất.
+                  </p>
+                  <a
+                    href="/du-an"
+                    class="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  >
+                    <i data-lucide="arrow-right" class="w-5 h-5 mr-2"></i>
+                    Xem các dự án Website
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop Tab -->
+          <div id="content-desktop" class="tab-content hidden">
+            <div class="relative h-96 rounded-2xl overflow-hidden mb-8">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-green-600 to-teal-600 opacity-90"
+              ></div>
+              <div class="absolute inset-0 bg-cover bg-center"></div>
+              <div
+                class="relative z-10 h-full flex items-center justify-center"
+              >
+                <div class="text-center text-white max-w-4xl px-8">
+                  <h3 class="text-4xl font-bold mb-6">Ứng dụng Desktop</h3>
+                  <p class="text-xl leading-relaxed mb-8">
+                    Trong lĩnh vực phát triển ứng dụng desktop, UCK Team tập
+                    trung vào việc xây dựng các phần mềm mạnh mẽ và hiệu quả cho
+                    môi trường Windows, macOS và Linux. Chúng tôi sử dụng các
+                    framework như Electron, .NET, Java Swing, và C++ để phát
+                    triển các ứng dụng từ đơn giản đến phức tạp. Đội ngũ có kinh
+                    nghiệm trong việc tạo ra các phần mềm quản lý doanh nghiệp,
+                    công cụ hỗ trợ giáo dục. Chúng tôi cam kết mang đến những
+                    sản phẩm có giao diện đẹp, hiệu suất cao và tính ổn định
+                    tuyệt đối.
+                  </p>
+                  <a
+                    href="/du-an"
+                    class="inline-flex items-center px-8 py-4 bg-white text-green-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  >
+                    <i data-lucide="arrow-right" class="w-5 h-5 mr-2"></i>
+                    Xem các dự án Desktop
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Tab -->
+          <div id="content-mobile" class="tab-content hidden">
+            <div class="relative h-96 rounded-2xl overflow-hidden mb-8">
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-orange-500 to-pink-600 opacity-90"
+              ></div>
+              <div class="absolute inset-0 bg-cover bg-center"></div>
+              <div
+                class="relative z-10 h-full flex items-center justify-center"
+              >
+                <div class="text-center text-white max-w-4xl px-8">
+                  <h3 class="text-4xl font-bold mb-6">Ứng dụng Mobile</h3>
+                  <p class="text-xl leading-relaxed mb-8">
+                    UCK Team có chuyên môn sâu trong việc phát triển ứng dụng di
+                    động cho cả nền tảng iOS và Android. Chúng tôi sử dụng các
+                    công nghệ native như Swift, Kotlin cũng như các framework
+                    cross-platform như React Native, Flutter để tạo ra những ứng
+                    dụng di động chất lượng cao. Đội ngũ của chúng tôi có kinh
+                    nghiệm phát triển các ứng dụng từ tiện ích đơn giản đến các
+                    hệ thống phức tạp . Chúng tôi luôn chú trọng đến việc tối ưu
+                    hóa hiệu suất, tiết kiệm pin và tạo ra trải nghiệm người
+                    dùng mượt mà trên mọi thiết bị di động.
+                  </p>
+                  <a
+                    href="/du-an"
+                    class="inline-flex items-center px-8 py-4 bg-white text-orange-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                  >
+                    <i data-lucide="arrow-right" class="w-5 h-5 mr-2"></i>
+                    Xem các dự án Mobile
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Structure Section -->
+    <section id="cau-truc-nhom" class="p-4 py-16">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-12 text-center">
+        Cấu trúc nhóm và thành viên
+      </h2>
+
+      <div class="max-w-6xl mx-auto space-y-16">
+        <!-- Người sáng lập -->
+        <div>
+          <h3 class="text-3xl font-bold text-gray-800 mb-8">Người sáng lập</h3>
+          <div class="space-y-12">
+            <!-- Founder 1: TS. Phạm Quang Dũng -->
+            <div
+              class="flex items-center gap-6 bg-white rounded-xl p-6 shadow-sm"
+            >
+              <!-- Avatar -->
+              <div class="flex-shrink-0">
+                <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-100">
+                  <img
+                    src="assets/pqdung.jpg"
+                    alt="TS. Phạm Quang Dũng"
+                    class="w-full h-full object-cover object-center"
+                  />
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-3">
+                  <h4 class="text-2xl font-bold text-gray-800">
+                    TS. Phạm Quang Dũng
+                  </h4>
+                  <span
+                    class="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium"
+                  >
+                    Founder
+                  </span>
+                </div>
+
+                <div class="space-y-1 text-gray-700 mb-4">
+                  <p class="text-base">
+                    <strong>Đơn vị:</strong> Bộ môn Mạng và Hệ thống thông tin –
+                    Khoa Công nghệ thông tin – Học viện Nông nghiệp Việt Nam
+                  </p>
+                  <p class="text-base">
+                    <strong>Chức vụ:</strong> Trưởng bộ môn Mạng và Hệ thống
+                    thông tin, Giám đốc Trung tâm tin học Học viện Nông Nghiệp
+                    Việt Nam.
+                  </p>
+                  <p class="text-base">
+                    <strong>Email:</strong> pqdung@vnua.edu.vn
+                  </p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex gap-3">
+                  <a
+                    href="https://fita.vnua.edu.vn/pqdung/"
+                    class="p-2 bg-gray-200 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300"
+                    target="_blank"
+                  >
+                    <i data-lucide="globe" class="w-5 h-5"></i>
+                  </a>
+                  <a
+                    href="https://zalo.me/0986511750"
+                    class="p-2 bg-sky-300 rounded-full hover:bg-sky-500 hover:text-white transition-all duration-300"
+                  >
+                    <img src="assets/zalo-icon.svg" class="w-5 h-5" />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/pqdung"
+                    class="p-2 bg-blue-600 rounded-full hover:bg-blue-800 text-white transition-all duration-300"
+                  >
+                    <i data-lucide="facebook" class="w-5 h-5"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Founder 2: Ths. Trần Trung Hiếu -->
+            <div
+              class="flex items-center gap-6 bg-white rounded-xl p-6 shadow-sm"
+            >
+              <!-- Avatar -->
+              <div class="flex-shrink-0">
+                <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-100">
+                  <img
+                    src="assets/tthieu.png"
+                    alt="Ths. Trần Trung Hiếu"
+                    class="w-full h-full object-cover object-center"
+                  />
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-3">
+                  <h4 class="text-2xl font-bold text-gray-800">
+                    Ths. Trần Trung Hiếu
+                  </h4>
+                  <span
+                    class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+                  >
+                    Giáo viên phụ trách
+                  </span>
+                </div>
+
+                <div class="space-y-1 text-gray-700 mb-4">
+                  <p class="text-base">
+                    <strong>Đơn vị:</strong> Bộ môn Công nghệ phần mềm – Khoa
+                    Công nghệ thông tin – Học viện Nông nghiệp Việt Nam
+                  </p>
+                  <p class="text-base">
+                    <strong>Chức vụ:</strong> Giảng viên chính bộ môn Công nghệ
+                    phần mềm, Cựu lập trình viên Fsoft.
+                  </p>
+                  <p class="text-base">
+                    <strong>Email:</strong> tthieu@vnua.edu.vn
+                  </p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex gap-3">
+                  <a
+                    href="https://fita.vnua.edu.vn/tthieu/"
+                    class="p-2 bg-gray-200 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300"
+                    target="_blank"
+                  >
+                    <i data-lucide="globe" class="w-5 h-5"></i>
+                  </a>
+                  <a
+                    href="https://zalo.me/0975276080"
+                    class="p-2 bg-sky-300 rounded-full hover:bg-sky-500 hover:text-white transition-all duration-300"
+                  >
+                    <img src="assets/zalo-icon.svg" class="w-5 h-5" />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/pqdung"
+                    class="p-2 bg-blue-600 rounded-full hover:bg-blue-800 text-white transition-all duration-300"
+                  >
+                    <i data-lucide="facebook" class="w-5 h-5"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thành viên thế hệ 1 -->
+        <div>
+          <h3 class="text-3xl font-bold text-gray-800 mb-8">
+            Thành viên thế hệ 1
+          </h3>
+          <div class="space-y-8">
+            <!-- Member 1: Dương Minh Hiếu -->
+            <div
+              class="flex items-center gap-6 bg-white rounded-xl p-6 shadow-sm"
+            >
+              <!-- Avatar -->
+              <div class="flex-shrink-0">
+                <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-100">
+                  <div
+                    class="w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center"
+                  >
+                    <span class="text-white text-2xl font-bold">DH</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-3">
+                  <h4 class="text-2xl font-bold text-gray-800">
+                    Dương Minh Hiếu
+                  </h4>
+                  <span
+                    class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+                  >
+                    Sinh viên
+                  </span>
+                </div>
+
+                <div class="space-y-1 text-gray-700 mb-4">
+                  <p class="text-base">
+                    <strong>Lớp:</strong> K66CNPMA - Bộ môn Công nghệ phần mềm –
+                    Khoa Công nghệ thông tin – Học viện Nông nghiệp Việt Nam
+                  </p>
+                  <p class="text-base">
+                    <strong>Email:</strong> 6667537@sv.vnua.edu.vn
+                  </p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex gap-3">
+                  <a
+                    href="#"
+                    class="p-2 hover:bg-gray-400 rounded-full bg-gray-800 text-white transition-all duration-300"
+                    target="_blank"
+                  >
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="p-2 bg-sky-300 rounded-full hover:bg-sky-500 hover:text-white transition-all duration-300"
+                  >
+                    <img src="assets/zalo-icon.svg" class="w-5 h-5" />
+                  </a>
+                  <a
+                    href="#"
+                    class="p-2 bg-blue-600 rounded-full hover:bg-blue-800 text-white transition-all duration-300"
+                  >
+                    <i data-lucide="facebook" class="w-5 h-5"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thành viên thế hệ 2 -->
+        <div>
+          <h3 class="text-3xl font-bold text-gray-800 mb-8">
+            Thành viên thế hệ 2
+          </h3>
+          <div class="space-y-8">
+            <!-- Member 1: Đỗ Phúc Lâm -->
+            <div
+              class="flex items-center gap-6 bg-white rounded-xl p-6 shadow-sm"
+            >
+              <!-- Avatar -->
+              <div class="flex-shrink-0">
+                <div class="w-32 h-32 rounded-full overflow-hidden bg-gray-100">
+                  <div
+                    class="w-full h-full bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center"
+                  >
+                    <span class="text-white text-2xl font-bold">ĐL</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1">
+                <div class="flex items-center gap-3 mb-3">
+                  <h4 class="text-2xl font-bold text-gray-800">Đỗ Phúc Lâm</h4>
+                  <span
+                    class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium"
+                  >
+                    Sinh viên
+                  </span>
+                </div>
+
+                <div class="space-y-1 text-gray-700 mb-4">
+                  <p class="text-base">
+                    <strong>Lớp:</strong> K67CNPMC - Bộ môn Công nghệ phần mềm –
+                    Khoa Công nghệ thông tin – Học viện Nông nghiệp Việt Nam
+                  </p>
+                  <p class="text-base">
+                    <strong>Email:</strong> 6767537@sv.vnua.edu.vn
+                  </p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex gap-3">
+                  <a
+                    href="#"
+                    class="p-2 hover:bg-gray-400 rounded-full bg-gray-800 text-white transition-all duration-300"
+                    target="_blank"
+                  >
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="p-2 bg-sky-300 rounded-full hover:bg-sky-500 hover:text-white transition-all duration-300"
+                  >
+                    <img src="assets/zalo-icon.svg" class="w-5 h-5" />
+                  </a>
+                  <a
+                    href="#"
+                    class="p-2 bg-blue-600 rounded-full hover:bg-blue-800 text-white transition-all duration-300"
+                  >
+                    <i data-lucide="facebook" class="w-5 h-5"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Structure Section -->
+    <section id="cau-truc-nhom" class="p-4 py-16">
+      <h2 class="text-4xl font-semibold text-gray-800 mb-12 text-center">
+        Đơn vị đồng hành
+      </h2>
+      <!-- HTML -->
+      <div class="marquee bg-gray-100 py-2">
+        <div class="marquee__content flex gap-8">
+          <span>🌟 Nội dung chạy chữ 1 🌟</span>
+          <span>🔥 Nội dung chạy chữ 2 🔥</span>
+          <span>💎 Nội dung chạy chữ 3 💎</span>
+        </div>
+      </div>
+    </section>
 
     <script>
+      // Initialize Lucide icons
+      lucide.createIcons();
+
       // Load banner.html
       fetch("banner.html")
         .then((response) => response.text())
@@ -197,6 +844,91 @@
         .catch((error) => {
           console.log("Banner file not found:", error);
         });
+
+      // Tab switching functionality
+      function switchTab(tabName) {
+        // Hide all tab contents
+        document.querySelectorAll(".tab-content").forEach((content) => {
+          content.classList.add("hidden");
+        });
+
+        // Remove active class from all tab buttons
+        document.querySelectorAll(".tab-button").forEach((button) => {
+          button.classList.remove(
+            "bg-blue-600",
+            "text-white",
+            "bg-green-600",
+            "bg-orange-500"
+          );
+          button.classList.add("text-gray-600", "hover:text-gray-800");
+        });
+
+        // Show selected tab content
+        document
+          .getElementById(`content-${tabName}`)
+          .classList.remove("hidden");
+
+        // Add active class to selected tab button
+        const activeButton = document.getElementById(`tab-${tabName}`);
+        activeButton.classList.remove("text-gray-600", "hover:text-gray-800");
+
+        // Set different colors for each tab
+        if (tabName === "website") {
+          activeButton.classList.add("bg-blue-600", "text-white");
+        } else if (tabName === "desktop") {
+          activeButton.classList.add("bg-green-600", "text-white");
+        } else if (tabName === "mobile") {
+          activeButton.classList.add("bg-orange-500", "text-white");
+        }
+      }
+
+      // Counter animation function
+      function animateCounter(element, targetValue, duration = 2000) {
+        const startValue = 0;
+        const increment = targetValue / (duration / 16); // 60 FPS
+        let currentValue = startValue;
+
+        const timer = setInterval(() => {
+          currentValue += increment;
+          if (currentValue >= targetValue) {
+            currentValue = targetValue;
+            clearInterval(timer);
+          }
+
+          // Special formatting for projects (20+)
+          if (element.id === "projects-count") {
+            element.textContent = Math.floor(currentValue) + "+";
+          } else {
+            element.textContent = Math.floor(currentValue);
+          }
+        }, 16);
+      }
+
+      // Intersection Observer for counter animation
+      const observerOptions = {
+        threshold: 0.5,
+        rootMargin: "0px 0px -100px 0px",
+      };
+
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Animate counters when section comes into view
+            animateCounter(document.getElementById("members-count"), 20);
+            animateCounter(document.getElementById("tech-count"), 10);
+            animateCounter(document.getElementById("projects-count"), 20);
+
+            // Unobserve to prevent re-triggering
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Start observing the about section
+      const aboutSection = document.getElementById("ve-chung-toi");
+      if (aboutSection) {
+        counterObserver.observe(aboutSection);
+      }
 
       // Smooth scrolling for navigation links
       document.querySelectorAll('nav a[href^="#"]').forEach((anchor) => {
