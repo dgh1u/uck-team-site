@@ -1,1 +1,625 @@
-ECHO is on.
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vietnam National University of Agriculture</title>
+    <link rel="stylesheet" href="dist/output.css" />
+    <link rel="stylesheet" href="src/input.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="i18n.js"></script>
+</head>
+
+<body>
+    <header class="bg-gradient-to-r from-sky-800 via-sky-900 to-sky-950 text-white">
+        <!-- Top section with logo and title -->
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0">
+                <!-- Logo and University Info -->
+                <div class="flex items-center space-x-2 md:space-x-4">
+                    <!-- University Logo -->
+                    <div class="w-12 h-12 md:w-16 md:h-16 flex-shrink-0">
+                        <img src="assets/vnua-logo.png" alt="VNUA Logo" class="w-full h-full object-contain" />
+                    </div>
+                    <!-- Fita Logo -->
+                    <div class="w-12 h-12 md:w-16 md:h-16 flex-shrink-0">
+                        <img src="assets/fita-vnua-logo.png" alt="FITA Logo" class="w-full h-full object-contain" />
+                    </div>
+                    <!-- University Name -->
+                    <div class="flex flex-col min-w-0">
+                        <h1 class="text-sm md:text-2xl font-bold tracking-wide leading-tight"
+                            data-i18n="header.university">
+                            HỌC VIỆN NÔNG NGHIỆP VIỆT NAM
+                        </h1>
+                        <h2 class="text-xs md:text-lg font-medium text-blue-200 leading-tight"
+                            data-i18n="header.faculty">
+                            KHOA CÔNG NGHỆ THÔNG TIN
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- UCK TEAM section -->
+                <div class="flex items-center space-x-2 md:space-x-3">
+                    <!-- UCK TEAM logo -->
+                    <div class="w-12 h-12 md:w-16 md:h-16 flex-shrink-0">
+                        <img src="assets/uck-team-logo.png" alt="UCK Team Logo" class="w-full h-full object-contain" />
+                    </div>
+
+                    <!-- UCK TEAM text -->
+                    <div class="text-left md:text-right">
+                        <h3 class="text-lg md:text-2xl font-bold text-white">UCK TEAM</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Green and Yellow bottom section -->
+        <div class="h-4 relative">
+            <!-- Yellow line on bottom -->
+            <div class="absolute bottom-0 right-0 h-4 w-[70%]">
+                <div class="h-full bg-gradient-to-r from-yellow-400 to-yellow-300 rounded-tl-full"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Green line outside header -->
+    <div class="h-4 w-[30.5%]">
+        <div class="h-full bg-gradient-to-r from-green-300 to-green-400 rounded-br-full"></div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo hoặc Brand (tùy chọn) -->
+                <div class="flex items-center">
+
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center justify-center flex-1">
+                    <ul class="flex space-x-8 py-6">
+                        <li>
+                            <a href="index.html"
+                                class="text-black hover:text-teal-600 2xl:text-xl lg:text-lg font-medium transition-colors duration-200 px-4 py-2 rounded"
+                                data-i18n="nav.introduction">
+                                Giới thiệu
+                            </a>
+                        </li>
+                        <li>
+                            <a href="projects.html"
+                                class="text-black hover:text-teal-600 2xl:text-xl lg:text-lg font-medium transition-colors duration-200 px-4 py-2 rounded"
+                                data-i18n="nav.projects">
+                                Dự án
+                            </a>
+                        </li>
+                        <li>
+                            <a href="collaborations.html"
+                                class="text-black hover:text-teal-600 2xl:text-xl lg:text-lg font-medium transition-colors duration-200 px-4 py-2 rounded"
+                                data-i18n="nav.collaborations">
+                                Hợp tác
+                            </a>
+                        </li>
+                        <li>
+                            <a href="achievements.html"
+                                class="text-black hover:text-teal-600 2xl:text-xl lg:text-lg font-medium transition-colors duration-200 px-4 py-2 rounded"
+                                data-i18n="nav.achievements">
+                                Thành tựu
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gallery.html"
+                                class="text-black hover:text-teal-600 2xl:text-xl lg:text-lg font-medium transition-colors duration-200 px-4 py-2 rounded"
+                                data-i18n="nav.gallery">
+                                Hoạt động
+                            </a>
+                        </li>
+                        <li>
+                            <a href="policy.html"
+                                class="text-teal-600 hover:text-teal-600 2xl:text-xl lg:text-lg font-medium transition-colors duration-200 px-4 py-2 rounded"
+                                data-i18n="nav.policy">
+                                Chính sách
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button"
+                    class="md:hidden flex items-center px-3 py-2 border rounded text-teal-600 border-teal-600 hover:text-teal-800 hover:border-teal-800 transition-colors duration-200">
+                    <svg id="hamburger-icon" class="fill-current h-3 w-3" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                    <svg id="close-icon" class="fill-current h-3 w-3 hidden" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>Close</title>
+                        <path
+                            d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+            <div class="flex flex-col h-full">
+                <!-- Mobile Menu Header -->
+                <div class="flex items-center justify-between p-4 border-b">
+                    <span class="text-xl font-bold text-teal-600">Menu</span>
+                    <button id="close-menu-button"
+                        class="flex items-center px-3 py-2 border rounded text-teal-600 border-teal-600 hover:text-teal-800 hover:border-teal-800 transition-colors duration-200">
+                        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Items -->
+                <div class="flex-1 overflow-y-auto">
+                    <ul class="flex flex-col space-y-2 p-4">
+                        <li>
+                            <a href="index.html"
+                                class="block text-black hover:text-teal-600 hover:bg-teal-50 text-lg font-medium transition-colors duration-200 px-4 py-4 rounded-lg"
+                                data-i18n="nav.introduction">
+                                Giới thiệu
+                            </a>
+                        </li>
+                        <li>
+                            <a href="projects.html"
+                                class="block text-black hover:text-teal-600 hover:bg-teal-50 text-lg font-medium transition-colors duration-200 px-4 py-4 rounded-lg"
+                                data-i18n="nav.projects">
+                                Dự án
+                            </a>
+                        </li>
+                        <li>
+                            <a href="collaborations.html"
+                                class="block text-black hover:text-teal-600 hover:bg-teal-50 text-lg font-medium transition-colors duration-200 px-4 py-4 rounded-lg"
+                                data-i18n="nav.collaborations">
+                                Hợp tác
+                            </a>
+                        </li>
+                        <li>
+                            <a href="achievements.html"
+                                class="block text-black hover:text-teal-600 hover:bg-teal-50 text-lg font-medium transition-colors duration-200 px-4 py-4 rounded-lg"
+                                data-i18n="nav.achievements">
+                                Thành tựu
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gallery.html"
+                                class="block text-black hover:text-teal-600 hover:bg-teal-50 text-lg font-medium transition-colors duration-200 px-4 py-4 rounded-lg"
+                                data-i18n="nav.gallery">
+                                Hoạt động
+                            </a>
+                        </li>
+                        <li>
+                            <a href="policy.html"
+                                class="block text-teal-600 hover:text-teal-800  hover:bg-teal-50 text-lg font-medium transition-colors duration-200 px-4 py-4 rounded-lg"
+                                data-i18n="nav.policy">
+                                Chính sách
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto text-center">
+
+            <h2 class="text-5xl md:text-6xl font-bold pb-6 bg-gradient-to-r from-yellow-500 to-teal-600 bg-clip-text text-transparent"
+                data-aos="zoom-in" data-i18n="policy.title">
+                Chính sách nhận sinh viên
+            </h2>
+            <p class="text-xl text-gray-500 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200"
+                data-i18n="policy.description">
+                Gia nhập UCK TEAM - Cộng đồng các sinh viên ưu tú chuyên ngành Công nghệ thông tin,
+                nơi kết nối những tài năng trẻ và phát triển kỹ năng lập trình chuyên nghiệp của Khoa Công nghệ thông
+                tin - Học viện Nông nghiệp Việt Nam.
+            </p>
+        </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Requirements Section -->
+    <section id="requirements" class="py-16 px-6 bg-gray-500">
+        <div class="container mx-auto">
+            <h3 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-500 to-teal-500 bg-clip-text text-transparent"
+                data-aos="fade-up" data-i18n="policy.requirements">
+                Yêu cầu tuyển sinh
+            </h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Academic Requirements -->
+                <div class="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10 hover:border-cyan-400/30 transition-all"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-cyan-400" data-i18n="policy.academic">Học thuật</h4>
+                    <ul class="space-y-2 text-white">
+                        <li data-i18n="policy.academic_gpa">• GPA ≥ 3.0/4.0 hoặc điểm cao các môn lập trình</li>
+                        <li data-i18n="policy.academic_major">• Đang học ngành CNTT tại Hoc vien Nong nghiep Viet Nam
+                        </li>
+                        <li data-i18n="policy.academic_year">• Năm 2 trở lên</li>
+                        <li data-i18n="policy.academic_spirit">• Có tinh thần học hỏi cao</li>
+                    </ul>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10 hover:border-purple-400/30 transition-all"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-purple-400" data-i18n="policy.technical">Kỹ thuật</h4>
+                    <ul class="space-y-2 text-white">
+                        <li data-i18n="policy.technical_programming">• Thành thạo ≥ 1 ngôn ngữ lập trình (ưu tiên Java)
+                        </li>
+                        <li data-i18n="policy.technical_algorithm">• Hiểu biết về thuật toán cơ bản</li>
+                        <li data-i18n="policy.technical_project">• Có project cá nhân</li>
+                        <li data-i18n="policy.technical_git">• Làm việc với Git cơ bản</li>
+                    </ul>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10 hover:border-green-400/30 transition-all"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-semibold mb-3 text-green-400" data-i18n="policy.soft_skills">Kỹ năng mềm
+                    </h4>
+                    <ul class="space-y-2 text-white">
+                        <li data-i18n="policy.soft_passion">• Có niềm đam mê với công nghệ thông tin</li>
+                        <li data-i18n="policy.soft_teamwork">• Làm việc nhóm hiệu quả</li>
+                        <li data-i18n="policy.soft_thinking">• Tư duy logic và sáng tạo</li>
+                        <li data-i18n="policy.soft_responsibility">• Nghiêm túc, tinh thần trách nhiệm cao</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-16 px-6">
+        <div class="container mx-auto">
+            <h3 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-500 to-teal-500 bg-clip-text text-transparent"
+                data-aos="fade-up" data-i18n="policy.process">
+                Quy trình tuyển sinh
+            </h3>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-xl font-bold text-white">1</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-cyan-400" data-i18n="policy.register">Đăng ký</h4>
+                    <p class="text-black" data-i18n="policy.register_desc">Nộp hồ sơ tới chúng tôi</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-xl font-bold text-white">2</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-purple-400" data-i18n="policy.screening">Sàng lọc</h4>
+                    <p class="text-black" data-i18n="policy.screening_desc">Kiểm tra và đánh giá hồ sơ</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-xl font-bold text-white">3</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-green-400" data-i18n="policy.interview">Phỏng vấn</h4>
+                    <p class="text-black" data-i18n="policy.interview_desc">Phỏng vấn và đánh giá năng lực</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="w-16 h-16 bg-gradient-to-r from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-xl font-bold text-white">4</span>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-orange-400" data-i18n="policy.announcement">Công bố</h4>
+                    <p class="text-black" data-i18n="policy.announcement_desc">Thông báo kết quả tới ứng viên</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-16 px-6 bg-gray-500">
+        <div class="container mx-auto">
+            <h3 class="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-500 to-teal-500 bg-clip-text text-transparent"
+                data-aos="fade-up" data-i18n="policy.benefits">
+                Quyền lợi thành viên
+            </h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-cyan-400" data-i18n="policy.real_projects">Dự án thực tế
+                    </h4>
+                    <p class="text-white" data-i18n="policy.real_projects_desc">Tham gia các dự án thực tế, đề tài
+                        nghiên cứu khoa học</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-purple-400" data-i18n="policy.mentorship">Mentorship</h4>
+                    <p class="text-white" data-i18n="policy.mentorship_desc">Được hướng dẫn bởi thầy Trần Trung Hiếu</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-green-400" data-i18n="policy.workshop">Workshop</h4>
+                    <p class="text-white" data-i18n="policy.workshop_desc">Tham gia các buổi workshop tại các hội thảo
+                        công nghệ lớn</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-r from-orange-400 to-red-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 6V8a2 2 0 00-2-2H6a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-orange-400" data-i18n="policy.job_opportunities">Cơ hội
+                        việc làm</h4>
+                    <p class="text-white" data-i18n="policy.job_opportunities_desc">Kết nối với các nhà tuyển dụng liên
+                        kết với khoa</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-blue-400" data-i18n="policy.skills">Kỹ năng</h4>
+                    <p class="text-white" data-i18n="policy.skills_desc">Nâng cao kỹ năng công nghệ thông tin của bản
+                        thân</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-white/10 to-white/5 p-6 rounded-xl border border-white/10"
+                    data-aos="fade-up" data-aos-delay="600">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-semibold mb-2 text-pink-400" data-i18n="policy.community">Cộng đồng</h4>
+                    <p class="text-white" data-i18n="policy.community_desc">Kết nối với cộng đồng sinh viên ưu tú của
+                        khoa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-6">
+        <div class="container mx-auto text-center">
+            <div class="bg-gradient-to-r from-white/10 to-white/5 p-12 rounded-2xl border border-white/10"
+                data-aos="zoom-in">
+                <h3 class="text-3xl font-bold mb-4 bg-gradient-to-r from-yellow-500 to-teal-500  bg-clip-text text-transparent"
+                    data-i18n="policy.join_cta">
+                    Sẵn sàng gia nhập UCK TEAM?
+                </h3>
+                <p class="text-black mb-8 max-w-2xl mx-auto text-lg" data-i18n="policy.join_desc">
+                    Đừng bỏ lỡ cơ hội trở thành một phần của cộng đồng các sinh viên tài năng.
+                    Chúng tôi luôn chào đón các thành viên mới mọi thời điểm. Hãy liên hệ với chúng tôi nếu bạn muốn gia
+                    nhập ngôi nhà chung UCK TEAM !
+                </p>
+
+                <p class="text-black max-w-2xl mx-auto text-lg font-bold" data-i18n="policy.email_address">
+                    Địa chỉ email nhận hồ sơ:
+                <div>
+                    <span class="block">tthieu@vnua.edu.vn (Mr. Hieu)</span>
+                    <span class="block">pqdung@vnua.edu.vn (Mr. Dung)</span>
+                </div>
+                </p>
+                <div class="flex justify-center space-x-4 mt-8 text-white">
+                    <a href="index.html#lien-he"
+                        class="bg-gradient-to-r from-yellow-500 to-teal-500 px-8 py-4 rounded-lg font-semibold  transition-all transform hover:scale-105 shadow-lg"
+                        data-i18n="policy.contact_us">
+                        Liên hệ với chúng tôi
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row justify-between items-start ">
+                <!-- Left side -->
+                <div class="space-y-6 flex-1">
+                    <!-- Logo and Team Name -->
+                    <div class="flex items-center space-x-4">
+                        <img src="assets/uck-team-logo.png" alt="UCK Team Logo" class="w-20 h-20 object-contain">
+                        <h3 class="text-2xl font-bold text-white">UCK TEAM</h3>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="text-gray-300 leading-relaxed max-w-3xl">
+                        <p class="text-justify text-lg" data-i18n="footer.description">UCK Team là đội ngũ nghiên cứu và
+                            phát triển
+                            công nghệ thông tin tại Học viện Nông nghiệp Việt Nam. Chúng tôi chuyên về phát triển các
+                            giải pháp công
+                            nghệ hiện đại, ứng dụng trí tuệ nhân tạo và khoa học dữ liệu trong nông nghiệp. Với kinh
+                            nghiệm và đam mê,
+                            UCK Team cam kết mang đến những sản phẩm chất lượng cao, góp phần thúc đẩy sự phát triển của
+                            ngành nông
+                            nghiệp thông minh và bền vững tại Việt Nam.</p>
+                    </div>
+                </div>
+
+                <!-- Right side -->
+                <div class="lg:text-right">
+                    <h4 class="text-2xl font-semibold text-white mb-4" data-i18n="footer.sitemap">Sơ đồ Website</h4>
+                    <nav class="space-y-3">
+                        <a href="index.html" class="block text-gray-300 hover:text-white transition-colors duration-300"
+                            data-i18n="nav.introduction">
+                            Giới thiệu
+                        </a>
+                        <a href="projects.html"
+                            class="block text-gray-300 hover:text-white transition-colors duration-300"
+                            data-i18n="nav.projects">
+                            Dự án
+                        </a>
+                        <a href="collaborations.html"
+                            class="block text-gray-300 hover:text-white transition-colors duration-300"
+                            data-i18n="nav.collaborations">
+                            Hợp tác
+                        </a>
+                        <a href="achievements.html"
+                            class="block text-gray-300 hover:text-white transition-colors duration-300"
+                            data-i18n="nav.achievements">
+                            Thành tựu
+                        </a>
+                        <a href="gallery.html"
+                            class="block text-gray-300 hover:text-white transition-colors duration-300"
+                            data-i18n="nav.gallery">
+                            Hoạt động
+                        </a>
+                        <a href="policy.html"
+                            class="block text-gray-300 hover:text-white transition-colors duration-300"
+                            data-i18n="nav.policy">
+                            Chính sách
+                        </a>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Copyright - Moved to bottom and centered -->
+            <div class="pt-6 border-t border-gray-800 mt-6 text-center">
+                <p class="text-gray-400 text-lg" data-i18n="footer.copyright">Copyright © UCK TEAM</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1600,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        function openMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+            hamburgerIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.remove('translate-x-0');
+            mobileMenu.classList.add('translate-x-full');
+            hamburgerIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Event listeners
+        mobileMenuButton.addEventListener('click', () => {
+            if (mobileMenu.classList.contains('translate-x-full')) {
+                openMenu();
+            } else {
+                closeMenu();
+            }
+        });
+
+        closeMenuButton.addEventListener('click', closeMenu);
+
+        // Close menu when clicking on menu items
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        // Close menu when clicking outside (optional)
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) {
+                closeMenu();
+            }
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) { // md breakpoint
+                closeMenu();
+            }
+        });
+    </script>
+</body>
+
+</html>
